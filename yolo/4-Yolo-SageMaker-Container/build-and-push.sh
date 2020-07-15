@@ -27,7 +27,7 @@ fi
 # Get the login command from ECR and execute it directly
 $(aws ecr get-login --region ${region} --no-include-email)
 
-# Get the login command from ECR in order to pull down the SageMaker PyTorch image
+# Get the login command from ECR in order to pull down the SageMaker Tensorflow image
 $(aws ecr get-login --registry-ids 763104351884 --region ${region} --no-include-email)
 
 # Build the docker image locally with the image name and then push it to ECR

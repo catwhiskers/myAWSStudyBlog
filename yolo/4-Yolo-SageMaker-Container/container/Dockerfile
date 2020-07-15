@@ -27,7 +27,7 @@ RUN cd /opt/darknet && ./build.sh
 ENV PATH="/opt/darknet:${PATH}"
 WORKDIR /opt/program
 
-COPY train.py /opt/program
+COPY main.py /opt/program
 #entry point for sagemaker training job 
-ENTRYPOINT ["python", "train.py"]
+ENTRYPOINT ["python", "main.py"]
 
